@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+</head>
+<body>
+    <div>
+        <img class="" src="./images/pexels-flo-dnd-2100075-removebg-preview.png" alt="">
+    </div>
+</body>
+</html>
+
+<style>
+
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url(./images/Untitled_design-removebg-preview\ \(1\).png);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    img{
+    position: absolute;
+    }
+    @keyframes back{
+    0%{
+        background:rgb(245, 203, 169);
+        background-image: url(./images/Untitled_design-removebg-preview\ \(1\).png);
+        background-size: cover;
+    }
+    100%{
+        background: rgb(159, 230, 246);
+        background-image: url(./images/Untitled_design-removebg-preview\ \(1\).png);
+        background-size: cover;
+    }
+   }
+   /* mobile */
+@media(min-width:300px){
+    body{
+        height: 35vh;
+        width: 50%;
+        animation: back 8s infinite ease-in-out ;
+    }
+    img{
+        height: 70vh; 
+        animation: floating 8s infinite ease-in-out;
+    }
+   @keyframes floating{
+        0%{
+            transform: translateY(-350px);
+        }
+        25%{
+            transform: translateY(-90px);
+        }
+        50%{
+            transform: translateY(200px);
+        }
+        75%{
+            transform: translateY(450px);
+        }
+        85%{
+            transform: translateY(-80px);
+        }
+        100%{
+            transform: translateY(85px);
+        }
+    }
+}
+/* tablet */
+    @media (min-width:700px){
+        body{
+        height: 90vh;
+        width: 95%;
+        animation: back 8s infinite ease-in-out ;
+    }
+    img{
+        height: 60vh;
+        animation: left-to-right 10s infinite ease-in-out;
+        
+    }
+   @keyframes left-to-right{
+    0%{
+        top:25%;
+        left:0;
+    }
+    20%{
+        top:5%;
+        left:20%;
+    }
+    50%{
+        top:25%;
+        left:40%;
+    }
+    70%{
+        top:0%;
+        left:55%;
+    }
+    90%{
+        top:10%;
+        left:60%;
+    }
+    100%{
+        top:25%;
+        left: 70%;
+    }
+    }
+}
+    /* desktop */
+@media (min-width:1200px){
+    body{
+        height: 35vh;
+        width: 85%;
+        animation: back 8s infinite ease-in-out ;
+    }
+    img{
+        height: 80vh;
+        position: absolute;
+        animation: floating 8s infinite ease-in-out;
+    }
+
+    @keyframes floating{
+        0%{
+            
+            transform: translateY(-350px);
+            
+        }
+        25%{
+            left:50%;
+            transform: translateY(-150px);
+        }
+        50%{
+            left:10%;
+            transform: translateY(20px);
+        }
+        75%{
+            left:70%;
+            transform: translateY(200px);
+        }
+        85%{
+            left:90%;
+            transform: translateY(-50px);
+        }
+        100%{
+            left:40%;
+            transform: translateY(0px);
+        }
+    }
+}
+</style>
